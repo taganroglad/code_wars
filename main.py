@@ -1,16 +1,15 @@
 def unique_in_order(number_or_words):
     # Сначала создаем список пустой чтобы можно было все сохранять
-    spisok = []
+    results = []
     # Называем переменную как угодно но она не должна допустить повторения порядка что будет при переборке
-    nedopusk = None
+    notnotnot = None
     # Ищем некоторый item во всех входных на функции
     for item in number_or_words:
-    # если вырезанный нами итем не равен ничему то.... (он потом будет равен текущему значению)
-        if item != nedopusk:
+        # если вырезанный нами итем не равен ничему то.... (он потом будет равен текущему значению)
+        if item != notnotnot:
             # добавляем к тому самому результату значения в список
-            spisok.append(item)
+            results.append(item)
             # теперь то ничто равно текущему значению
-            nedopusk = item
-    return  spisok
-
-print(unique_in_order((5, 3, 6, 6, 7, 7)))
+            notnotnot = item
+    return results
+print(unique_in_order('AAAABBBCCDAABBB'))
